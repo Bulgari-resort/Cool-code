@@ -1,0 +1,20 @@
+game.Players.PlayerAdded:connect(function(newPlayer)
+	local rank = newPlayer:GetRankInGroup(15244663)
+	local teamName = ""
+	if rank == 255 then
+		teamName = "Management"
+	elseif rank == 254 then
+		teamName = "Management"
+	elseif rank == 253 then
+		teamName = "Management"
+	elseif rank >= 200 then
+		teamName = "Staff"
+	elseif rank > 175 then
+		teamName = "Staff"
+	elseif rank > 150 then
+		teamName = "Staff"
+	elseif rank == 100 then
+		teamName = "Staff"
+	end
+	newPlayer.TeamColor = game.Teams[teamName].TeamColor
+end)
